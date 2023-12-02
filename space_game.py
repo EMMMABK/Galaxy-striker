@@ -9,13 +9,16 @@ def run():
     bg_color = (0,0,0)
     gun = Gun(screen)
     bullets = Group()
+    inos = Group()
+    controls.create_army(screen, inos)
 
     while True:
         controls.events(screen, gun, bullets)
         gun.update_gun()
         bullets.update()
-        controls.update(bg_color, screen, gun, bullets)
+        controls.update(bg_color, screen, gun, inos, bullets)
         controls.update_bullets(bullets)
+        controls.update_inos(inos)
 
 if __name__ == "__main__":
     run()
