@@ -1,6 +1,6 @@
 import pygame, controls
 from gun import Gun
-
+from pygame.sprite import Group
 
 def run():
     pygame.init()
@@ -8,13 +8,14 @@ def run():
     pygame.display.set_caption("Space defenders")
     bg_color = (0,0,0)
     gun = Gun(screen)
+    bullets = Group()
 
     while True:
-        controls.events(gun)
+        controls.events(screen, gun, bullets)
         gun.update_gun()
-        screen.fill(bg_color)
-        gun.output()
-        pygame.display.flip()
+        bullets.update()
+        controls.update(bg_color, screen, gun, bullets)
+        controls.update_bullets(bullets)
 
 if __name__ == "__main__":
     run()
