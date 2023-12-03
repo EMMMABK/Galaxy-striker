@@ -16,11 +16,12 @@ def run():
 
     while True:
         controls.events(screen, gun, bullets)
-        gun.update_gun()
-        bullets.update()
-        controls.update(bg_color, screen, gun, inos, bullets)
-        controls.update_bullets(screen, inos, bullets)
-        controls.update_inos(stats, screen,gun, inos, bullets)
+        if stats.run_game:
+            gun.update_gun()
+            bullets.update()
+            controls.update(bg_color, screen, gun, inos, bullets)
+            controls.update_bullets(screen, inos, bullets)
+            controls.update_inos(stats, screen,gun, inos, bullets)
 
 if __name__ == "__main__":
     run()
