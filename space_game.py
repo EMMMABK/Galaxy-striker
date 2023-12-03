@@ -17,7 +17,7 @@ def run():
         gun.update_gun()
         bullets.update()
         controls.update(bg_color, screen, gun, inos, bullets)
-        controls.update_bullets(bullets)
+        controls.update_bullets(inos, bullets)
         controls.update_inos(inos)
 
 if __name__ == "__main__":
