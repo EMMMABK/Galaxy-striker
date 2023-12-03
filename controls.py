@@ -38,7 +38,7 @@ def update_bullets(inos, bullets):
     collisions = pygame.sprite.groupcollide(bullets, inos, True, True)
 
 def gun_kill(stats, screen, gun, inos, bullets):
-    stats.gun_left -=1
+    stats.guns_left -=1
     inos.empty()
     bullets.empty()
     create_army(screen, inos)
