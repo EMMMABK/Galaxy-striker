@@ -42,6 +42,7 @@ def update_bullets(screen, stats, sc, inos, bullets):
             stats.score += 10 * len(inos)
         sc.image_score()
         check_high_score(stats, sc)
+        sc.image_guns()
     if len(inos) == 0:
         bullets.empty()
         create_army(screen, inos)
