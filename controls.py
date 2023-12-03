@@ -35,10 +35,12 @@ def update_bullets(inos, bullets):
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
     collisions = pygame.sprite.groupcollide(bullets, inos, True, True)
-        
 
-def update_inos(inos):
+
+def update_inos(gun, inos):
     inos.update()
+    if pygame.sprite.spritecollideany(gun, inos):
+        print("!!!!!!!")
 
 def create_army(screen,inos):
     ino = Ino(screen)
