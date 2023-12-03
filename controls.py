@@ -31,12 +31,16 @@ def update(bg_color, screen, stats, sc, gun, inos, bullets):
     inos.draw(screen)
     pygame.display.flip()
 
-def update_bullets(screen, inos, bullets):
+def update_bullets(screen, stats, sc, inos, bullets):
     bullets.update()
     for bullet in bullets.copy():
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
     collisions = pygame.sprite.groupcollide(bullets, inos, True, True)
+    if collisions:
+        for inos in collisions.values():
+            stats.score += 10 * len(inos)
+        sc.image_score()
     if len(inos) == 0:
         bullets.empty()
         create_army(screen, inos)
