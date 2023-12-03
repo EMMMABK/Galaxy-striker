@@ -5,3 +5,4 @@ class Stats():
 
     def reset_stats(self):
         self.guns_left = 2
+        self.score = 0
