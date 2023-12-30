@@ -2,7 +2,7 @@
 
 # Galaxy-striker 🚀🎮
 
-
+Welcome to an immersive gaming experience! Our project invites you to explore a rich world filled with excitement, challenges, and endless possibilities. Get ready to dive into thrilling adventures, forge new paths, and unleash your gaming prowess. Join us on this epic journey where creativity meets innovation, and every moment promises excitement. Your adventure begins here!
 This is a simple Space Invaders-like game built in Python using Pygame.
 
 ## Overview 🌌
