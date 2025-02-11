@@ -33,6 +33,10 @@ The game consists of a player-controlled spaceship that shoots bullets to elimin
 - Your score increases by defeating aliens.
 - The game ends when the aliens reach the bottom or when you run out of lives.
 
+## Screenshot
+
+![striker](./assets/striker1.png)
+
 ## Features ✨
 
 - Player-controlled spaceship.
